@@ -1792,15 +1792,15 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>好压</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.11.1</string>
+	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>TUnA</string>
 	<key>CFBundleVersion</key>
-	<string>109</string>
+	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
@@ -1861,8 +1861,6 @@
 	</array>
 	<key>OSAScriptingDefinition</key>
 	<string>TheUnarchiverSuite.sdef</string>
-	<key>SUFeedURL</key>
-	<string>https://unarchiver.c3.cx/updates.rss</string>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
@@ -3127,5 +3125,7 @@
 			</dict>
 		</dict>
 	</array>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2019 Muzi. All rights reserved.</string>
 </dict>
 </plist>

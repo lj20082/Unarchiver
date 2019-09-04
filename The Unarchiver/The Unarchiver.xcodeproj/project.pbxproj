@@ -817,15 +817,20 @@
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					1B6BD5691BB194D000EA3E01 = {
-						DevelopmentTeam = M9KXCWYWYR;
+						DevelopmentTeam = 9782QNA32L;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
 					8D1107260486CEB800E47090 = {
-						DevelopmentTeam = M9KXCWYWYR;
+						DevelopmentTeam = 9782QNA32L;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -856,6 +861,17 @@
 				"pt-BR",
 				nl,
 				hu,
+				en,
+				de,
+				fr,
+				it,
+				ja,
+				pl,
+				tr,
+				lv,
+				"pt-PT",
+				nb,
+				ar,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* The Unarchiver */;
 			projectDirPath = "";
@@ -1467,6 +1483,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9782QNA32L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					/Library/Frameworks,
@@ -1480,7 +1497,7 @@
 				INSTALL_PATH = /Applications;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "-DUseSandbox";
-				PRODUCT_BUNDLE_IDENTIFIER = cx.c3.theunarchiver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muzi.haoya;
 				PRODUCT_NAME = "The Unarchiver";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -1493,11 +1510,12 @@
 		1B6BD5AF1BB194D000EA3E01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "The Unarchiver.entitlements";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 9782QNA32L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					/Library/Frameworks,
@@ -1513,7 +1531,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "-DUseSparkle";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cx.c3.theunarchiver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muzi.haoyavip;
 				PRODUCT_NAME = "The Unarchiver";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -1525,11 +1543,12 @@
 		1B6BD5B01BB194D000EA3E01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = "The Unarchiver.entitlements";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9782QNA32L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					/Library/Frameworks,
@@ -1545,7 +1564,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "-DUseSparkle";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cx.c3.theunarchiver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muzi.haoyavip;
 				PRODUCT_NAME = "The Unarchiver";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -1563,6 +1582,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 9782QNA32L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					/Library/Frameworks,
@@ -1576,7 +1596,7 @@
 				INSTALL_PATH = /Applications;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "-DUseSandbox";
-				PRODUCT_BUNDLE_IDENTIFIER = cx.c3.theunarchiver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muzi.haoya;
 				PRODUCT_NAME = "The Unarchiver";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;

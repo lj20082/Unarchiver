@@ -9,10 +9,6 @@
 #import "CSURLCache.h"
 #endif
 
-#ifdef UseSparkle
-#import <Sparkle/Sparkle.h>
-#endif
-
 #import <unistd.h>
 #import <sys/stat.h>
 #import <Carbon/Carbon.h>
@@ -46,9 +42,6 @@ static BOOL IsPathWritable(NSString *path);
 		[addtasks setFinishAction:@selector(addQueueEmpty:) target:self];
 		[extracttasks setFinishAction:@selector(extractQueueEmpty:) target:self];
 
-		#ifdef UseSparkle
-		[SUUpdater new];
-		#endif
 	}
 	return self;
 }
@@ -77,18 +70,6 @@ static BOOL IsPathWritable(NSString *path);
 
 	if(floor(NSAppKitVersionNumber)<=NSAppKitVersionNumber10_3)
 	[prefstabs removeTabViewItem:formattab];
-
-	#ifdef UseSparkle
-	NSMenu *mainmenu=[[NSApplication sharedApplication] mainMenu];
-	NSMenu *appmenu=[[mainmenu itemAtIndex:0] submenu];
-
-	NSMenuItem *item=[[NSMenuItem new] autorelease];
-	item.title=NSLocalizedString(@"Check for Update…",@"Check for update menu item");
-	item.target=self;
-	item.action=@selector(checkForUpdates:);
-
-	[appmenu insertItem:item atIndex:1];
-	#endif
 
 	[encodingpopup buildEncodingListWithAutoDetect];
 	NSStringEncoding encoding=[[NSUserDefaults standardUserDefaults] integerForKey:@"filenameEncoding"];
@@ -668,19 +649,6 @@ static BOOL IsPathWritable(NSString *path);
 	[mainwindow setFrame:newframe display:YES animate:NO];
 }
 
-
-
-
-#ifdef UseSparkle
--(IBAction)checkForUpdates:(id)sender
-{
-	[SUUpdater.sharedUpdater checkForUpdates:sender];
-}
-#endif
-
-
-
-
 -(void)updateDestinationPopup
 {
 	NSString *path=[[NSUserDefaults standardUserDefaults] stringForKey:@"extractionDestinationPath"];
@@ -827,7 +795,7 @@ userData:(NSString *)data error:(NSString **)error
 
 -(IBAction)openSupportBoard:(id)sender
 {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://wakaba.c3.cx/sup/"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://wakaba.c3.cx/sup/"]];
 }
 
 -(IBAction)openBugReport:(id)sender
@@ -837,7 +805,7 @@ userData:(NSString *)data error:(NSString **)error
 
 -(IBAction)openHomePage:(id)sender
 {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://unarchiver.c3.cx/"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://unarchiver.c3.cx/"]];
 }
 
 -(BOOL)application:(NSApplication *)sender delegateHandlesKey:(NSString *)key
